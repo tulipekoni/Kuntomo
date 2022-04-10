@@ -1,22 +1,23 @@
-import "./App.css";
-
+import Asiakastarinat from "./pages/asiakastarinat/Asiakastarinat";
+import Hintalaskuri from "./pages/hintalaskuri/Hintalaskuri";
+import Koti from "./pages/koti/Koti";
+import React, { Fragment } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Fragment>
+        <Navbar />
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Routes>
+            <Route exact path='/' element={<Koti />} />
+            <Route exact path='/asiakastarinat' element={<Asiakastarinat />} />
+            <Route exact path='/hintalaskuri' element={<Hintalaskuri />} />
+          </Routes>
+        </div>
+      </Fragment>
+    </Router>
   );
 }
 
