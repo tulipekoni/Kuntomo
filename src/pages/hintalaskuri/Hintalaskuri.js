@@ -1,6 +1,11 @@
 import React from "react";
 import PageContainer from "../../components/PageContainer";
+import HintalaskuriHero from "./HintalaskuriHero";
 
 export default function Hintalaskuri() {
-  return <PageContainer>Hintalaskuri</PageContainer>;
+  return (
+    <PageContainer>
+      <HintalaskuriHero />
+    </PageContainer>
+  );
 }

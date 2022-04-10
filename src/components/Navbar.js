@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { LogoButton } from "./LogoButton";
 import styled from "styled-components";
 import { device } from "../infrastructure/media-queries/device";
@@ -77,10 +77,3 @@ const Container = styled.div`
     max-width: 800px;
   }
 `;
-const linkStyle = {
-  margin: "1rem",
-  textDecoration: "none",
-  color: theme.colors.black,
-  fontFamily: "Poppins",
-  fontWeight: "bold",
-};

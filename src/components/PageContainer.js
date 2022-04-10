@@ -9,6 +9,6 @@ const Container = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
-  background-color: wheat;
+  flex-direction: column;
   max-width: 800px;
 `;
