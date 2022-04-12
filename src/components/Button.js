@@ -58,9 +58,9 @@ const Chevron = ({ hover }) => {
       <path
         d='M0.999939 0.99994L8.07104 7.36227L0.999939 13.7246'
         stroke='white'
-        stroke-width='1.40424'
-        stroke-linecap='round'
-        stroke-linejoin='round'
+        strokeWidth='1.40424'
+        strokeLinecap='round'
+        strokeLinejoin='round'
       />
     </svg>
   );

@@ -45,9 +45,9 @@ const Star = ({ hide }) => {
         d='M9.24002 1.22668L11.6708 6.15122L17.1067 6.94575L13.1734 10.7768L14.1016 16.1891L9.24002 13.6324L4.37842 16.1891L5.30669 10.7768L1.37335 6.94575L6.80922 6.15122L9.24002 1.22668Z'
         fill={hide ? "fff" : "#8A6FFF"}
         stroke={hide ? "fff" : "#8A6FFF"}
-        stroke-width='1.57333'
-        stroke-linecap='round'
-        stroke-linejoin='round'
+        strokeWidth='1.57333'
+        strokeLinecap='round'
+        strokeLinejoin='round'
       />
     </svg>
   );
