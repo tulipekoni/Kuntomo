@@ -11,9 +11,11 @@ const ContainerColumn = styled.section`
   flex-direction: column;
   align-items: center;
   padding: 64px;
+  position: relative;
 `;
 const ContainerRow = styled.section`
   display: flex;
   flex-direction: row;
   padding: 64px;
+  position: relative;
 `;
