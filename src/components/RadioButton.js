@@ -3,7 +3,7 @@ import "../infrastructure/styles/radiobutton.css";
 export default function RadioButton({ state, setState, label }) {
   const [value, setValue] = useState(label);
   return (
-    <label>
+    <label className='radioContainer'>
       <input
         type='radio'
         name='tyyppi'

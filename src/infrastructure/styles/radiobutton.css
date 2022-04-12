@@ -1,4 +1,4 @@
-label {
+.radioContainer {
 	display: flex;
 	cursor: pointer;
 	font-weight: 500;
@@ -8,20 +8,20 @@ label {
     font-family: 'Poppins', sans-serif; 
 }
 
-label input {
+.radioContainer input {
 	position: absolute;
 	left: -9999px;
 }
 
-label input:checked+span {
+.radioContainer input:checked+span {
 	background-color: #E1DBFF;
 }
 
-label input:checked+span:before {
+.radioContainer input:checked+span:before {
 	box-shadow: inset 0 0 0 0.4375em #8A6FFF;
 }
 
-label span {
+.radioContainer span {
 	display: flex;
 	align-items: center;
 	padding: 0.375em 0.75em 0.375em 0.375em;
@@ -29,11 +29,11 @@ label span {
 	transition: 0.25s ease;
 }
 
-label span:hover {
+.radioContainer span:hover {
 	background-color: #F0EDFF;
 }
 
-label span:before {
+.radioContainer span:before {
 	display: flex;
 	flex-shrink: 0;
 	content: "";
@@ -44,17 +44,4 @@ label span:before {
 	margin-right: 0.375em;
 	transition: 0.25s ease;
 	box-shadow: inset 0 0 0 0.125em #8A6FFF;
-}
-
-.container {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    padding: 20px;
 }
