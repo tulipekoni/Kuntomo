@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Slider from "../../components/Slider";
 export default function Laskuri() {
   const [kesto, setKesto] = useState(50);
-  const [kerrat, setKerrat] = useState(50);
+  const [kerrat, setKerrat] = useState(4);
 
   return (
     <SectionColumn>
@@ -14,6 +14,14 @@ export default function Laskuri() {
         unit='kertaa'
         value={kerrat}
         setValue={setKerrat}
+        min={1}
+        max={7}
+      />
+      <Slider
+        title='Kuinka pitkiä treenejä haluat tehdä?'
+        unit='minuuttia'
+        value={kesto}
+        setValue={setKesto}
         min={20}
         max={80}
       />
