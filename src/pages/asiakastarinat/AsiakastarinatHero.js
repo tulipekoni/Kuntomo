@@ -3,7 +3,7 @@ import ImageSVG from "../../components/image-svg";
 import StarReview from "../../components/StarReview";
 import styled from "styled-components";
 import { device } from "../../infrastructure/media-queries/device";
-import Section from "../../components/Section";
+import { Section } from "../../components/Section";
 
 export default function () {
   return (

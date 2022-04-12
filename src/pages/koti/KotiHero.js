@@ -2,7 +2,7 @@ import React from "react";
 import ImageSVG from "../../components/image-svg";
 import Button from "../../components/Button";
 import styled from "styled-components";
-import Section from "../../components/Section";
+import { Section } from "../../components/Section";
 
 export default function KotiHero() {
   return (

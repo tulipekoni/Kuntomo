@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Section from "../../components/Section";
+import { Section } from "../../components/Section";
 import "../../infrastructure/styles/slider.css";
 import styled from "styled-components";
 import Slider from "../../components/Slider";

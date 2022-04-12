@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-export default function Section(props) {
+export function Section(props) {
   return <Container>{props.children}</Container>;
 }
 

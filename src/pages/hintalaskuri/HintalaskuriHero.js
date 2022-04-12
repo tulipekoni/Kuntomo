@@ -1,6 +1,6 @@
 import React from "react";
 import ImageSVG from "../../components/image-svg";
-import Section from "../../components/Section";
+import { Section } from "../../components/Section";
 
 export default function HintalaskuriHero() {
   return (
