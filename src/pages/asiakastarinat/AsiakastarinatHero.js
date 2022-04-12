@@ -3,9 +3,11 @@ import ImageSVG from "../../components/image-svg";
 import StarReview from "../../components/StarReview";
 import styled from "styled-components";
 import { device } from "../../infrastructure/media-queries/device";
+import Section from "../../components/Section";
+
 export default function () {
   return (
-    <Container>
+    <Section>
       <div>
         <h1>Palvelumme pyörivät sinun ehdoillasi!</h1>
         <p>
@@ -23,14 +25,9 @@ export default function () {
       <ImageContainer>
         <ImageSVG i={1} />
       </ImageContainer>
-    </Container>
+    </Section>
   );
 }
-const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding: 64px;
-`;
 const ImageContainer = styled.div`
   flex: 1;
 `;

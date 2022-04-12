@@ -2,11 +2,11 @@ import React from "react";
 import ImageSVG from "../../components/image-svg";
 import Button from "../../components/Button";
 import styled from "styled-components";
-import { device } from "../../infrastructure/media-queries/device";
+import Section from "../../components/Section";
 
 export default function KotiHero() {
   return (
-    <div style={{ display: "flex", flexDirection: "row", padding: 64 }}>
+    <Section>
       <TextContainer>
         <h1>Kuntosali ja kattava valmennus Oulun keskustassa!</h1>
         <p>Kauppurienkatu 12, 90100 Oulu</p>
@@ -19,7 +19,7 @@ export default function KotiHero() {
       <div style={{ flex: 1 }}>
         <ImageSVG i={0} />
       </div>
-    </div>
+    </Section>
   );
 }
 
