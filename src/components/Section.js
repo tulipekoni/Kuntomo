@@ -1,10 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-export function Section(props) {
-  return <Container>{props.children}</Container>;
+export function SectionRow(props) {
+  return <ContainerRow>{props.children}</ContainerRow>;
 }
-
-const Container = styled.section`
+export function SectionColumn(props) {
+  return <ContainerColumn>{props.children}</ContainerColumn>;
+}
+const ContainerColumn = styled.section`
+  display: flex;
+  flex-direction: column;
+  padding: 64px;
+`;
+const ContainerRow = styled.section`
   display: flex;
   flex-direction: row;
   padding: 64px;

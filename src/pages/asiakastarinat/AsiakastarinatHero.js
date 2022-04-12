@@ -3,11 +3,11 @@ import ImageSVG from "../../components/image-svg";
 import StarReview from "../../components/StarReview";
 import styled from "styled-components";
 import { device } from "../../infrastructure/media-queries/device";
-import { Section } from "../../components/Section";
+import { SectionRow } from "../../components/Section";
 
 export default function () {
   return (
-    <Section>
+    <SectionRow>
       <div>
         <h1>Palvelumme pyörivät sinun ehdoillasi!</h1>
         <p>
@@ -25,7 +25,7 @@ export default function () {
       <ImageContainer>
         <ImageSVG i={1} />
       </ImageContainer>
-    </Section>
+    </SectionRow>
   );
 }
 const ImageContainer = styled.div`

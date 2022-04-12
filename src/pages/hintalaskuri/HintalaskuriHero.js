@@ -1,10 +1,10 @@
 import React from "react";
 import ImageSVG from "../../components/image-svg";
-import { Section } from "../../components/Section";
+import { SectionRow } from "../../components/Section";
 
 export default function HintalaskuriHero() {
   return (
-    <Section>
+    <SectionRow>
       <div>
         <h1>Tervetuloa hintalaskuriin!</h1>
         <p>
@@ -17,6 +17,6 @@ export default function HintalaskuriHero() {
       <div style={{ flex: 1 }}>
         <ImageSVG i={2} />
       </div>
-    </Section>
+    </SectionRow>
   );
 }
