@@ -9,6 +9,7 @@ export function SectionColumn(props) {
 const ContainerColumn = styled.section`
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 64px;
 `;
 const ContainerRow = styled.section`
