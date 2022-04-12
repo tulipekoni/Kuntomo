@@ -26,6 +26,7 @@ const SliderContainer = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
+  align-items: center;
 `;
 const Title = styled.h2`
   margin-bottom: 48px;
