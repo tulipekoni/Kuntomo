@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { SectionColumn } from "../../components/Section";
 import "../../infrastructure/styles/slider.css";
 import styled from "styled-components";
 import Slider from "../../components/Slider";
 import RadioButton from "../../components/RadioButton";
+import Toggle from "../../components/Toggle";
+import { Balls3x } from "../../components/Ball3x";
 export default function Laskuri() {
   const [kesto, setKesto] = useState(50);
   const [kerrat, setKerrat] = useState(4);
   const [laji, setLaji] = useState("kuntosali");
+  const [ravintosuunnitelma, setRavintosuunnitelma] = useState(true);
+  const [hinta, setHinta] = useState(160);
+
+  useEffect(() => {
+    setHinta(kesto);
+  }, [kesto, kerrat, laji, ravintosuunnitelma]);
 
   return (
     <SectionColumn>
@@ -27,7 +35,7 @@ export default function Laskuri() {
         min={20}
         max={80}
       />
-      <div>
+      <form>
         {lajit.map((value, index) => (
           <RadioButton
             label={value}
@@ -36,11 +44,52 @@ export default function Laskuri() {
             onChange={(a) => setLaji(lajit[index])}
           />
         ))}
-      </div>
+      </form>
+      <Toggle
+        label='Haluatko ravintosuunnitelman?'
+        state={ravintosuunnitelma}
+        setState={() => setRavintosuunnitelma((v) => !v)}
+      />
+      <Text>
+        Hintasi on:{" "}
+        <Price>
+          {hinta}€<Unit>/kk</Unit>
+        </Price>
+      </Text>
+      <Text>
+        Ohjaajasi on: <Trainer>{ohjaajat[2]}</Trainer>
+      </Text>
+      <BG />
     </SectionColumn>
   );
 }
 
+const BG = () => (
+  <>
+    <Balls3x style={{ position: "absolute", top: 0, right: 0 }} />
+    <Balls3x style={{ position: "absolute", bottom: 0, left: 0 }} />
+  </>
+);
+
+const Text = styled.p`
+  font-size: 16px;
+`;
+const Price = styled.span`
+  font-size: 56px;
+  margin-left: 44px;
+`;
+const Unit = styled.span`
+  font-size: 28px;
+`;
+const Trainer = styled.span`
+  font-size: 20px;
+  margin-left: 44px;
+`;
+
+const Line = styled.hr`
+  border: 1px solid red;
+  width: 100%;
+`;
 const lajit = [
   "kuntosali",
   "Kestävyysharjoittelu",
@@ -48,8 +97,12 @@ const lajit = [
   "Voimaharjoittelu",
   "Muu",
 ];
-const RadioButtonContainer = styled.section`
-  display: flex;
-  flex-direction: row;
-  padding: 64px;
-`;
+const ohjaajat = [
+  "Marko Savolainen",
+  "Inkeri Määttä",
+  "Ripe Rautaleuka",
+  "Ninni Merikylä",
+  "Joona Kotaniemi",
+  "Unelma Sirpaleena",
+  "Heidi Lapaluu",
+];
