@@ -9,7 +9,7 @@ import { Balls3x } from "../../components/Ball3x";
 export default function Laskuri() {
   const [kesto, setKesto] = useState(50);
   const [kerrat, setKerrat] = useState(4);
-  const [laji, setLaji] = useState("kuntosali");
+  const [laji, setLaji] = useState("Kuntosali");
   const [ravintosuunnitelma, setRavintosuunnitelma] = useState(true);
   const [hinta, setHinta] = useState(160);
 
@@ -41,7 +41,7 @@ export default function Laskuri() {
             label={value}
             key={index}
             checked={laji === lajit[index]}
-            onChange={(a) => setLaji(lajit[index])}
+            onClick={setLaji}
           />
         ))}
       </form>
@@ -91,7 +91,7 @@ const Line = styled.hr`
   width: 100%;
 `;
 const lajit = [
-  "kuntosali",
+  "Kuntosali",
   "Kestävyysharjoittelu",
   "Ryhmäliikunta",
   "Voimaharjoittelu",

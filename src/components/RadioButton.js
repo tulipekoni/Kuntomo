@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import "../infrastructure/styles/radiobutton.css";
-export default function RadioButton({ state, setState, label }) {
-  const [value, setValue] = useState(label);
+export default function RadioButton({ state, onClick, label }) {
   return (
     <label className='radioContainer'>
       <input
         type='radio'
         name='tyyppi'
         id={label}
-        checked={value == label}
-        onChange={() => setState(value)}
+        checked={state}
+        onClick={(e) => onClick(label)}
       />
       <span htmlFor={label}>{label}</span>
     </label>
