@@ -1,7 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function Slider({ min, max, title, value, setValue, unit }) {
+export default function Slider({
+  min,
+  max,
+  title,
+  value,
+  setValue,
+  unit,
+  latter = "",
+}) {
   return (
     <SliderContainer>
       <Title>{title}</Title>
@@ -16,7 +24,7 @@ export default function Slider({ min, max, title, value, setValue, unit }) {
           console.log(a.target.value);
         }}
       />
-      <ValueText>{value}</ValueText>
+      <ValueText>{value + latter}</ValueText>
       <UnitText>{unit}</UnitText>
     </SliderContainer>
   );

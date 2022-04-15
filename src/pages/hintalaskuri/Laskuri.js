@@ -7,16 +7,19 @@ import RadioButton from "../../components/RadioButton";
 import Toggle from "../../components/Toggle";
 import { Balls3x } from "../../components/Ball3x";
 export default function Laskuri() {
-  const [kesto, setKesto] = useState(50);
+  const [kesto, setKesto] = useState(5);
   const [kerrat, setKerrat] = useState(4);
   const [laji, setLaji] = useState("Kuntosali");
   const [ravintosuunnitelma, setRavintosuunnitelma] = useState(true);
   const [hinta, setHinta] = useState(160);
+  const [ohjaaja, setOhjaaja] = useState(ohjaajat[0]);
   useEffect(() => {
     var lajiaddon = parseInt(laji.charCodeAt(2));
-    var sum = parseInt(+kesto + +kerrat * 10);
-    var price = Math.round(sum / 2 + (lajiaddon % 12) * 8);
+    var sum = parseInt(+kesto * 10 + +kerrat * 10);
+    var ravinto = ravintosuunnitelma ? 20 : 0;
+    var price = Math.round(sum / 2 + (lajiaddon % 12) * 8 + ravinto);
     setHinta(price);
+    setOhjaaja(ohjaajat[price % 7]);
   }, [kesto, kerrat, laji, ravintosuunnitelma]);
 
   return (
@@ -31,11 +34,12 @@ export default function Laskuri() {
       />
       <Slider
         title='Kuinka pitkiä treenejä haluat tehdä?'
+        latter='0'
         unit='minuuttia'
         value={kesto}
         setValue={setKesto}
-        min={20}
-        max={80}
+        min={2}
+        max={8}
       />
       <form>
         {lajit.map((value, index) => (
@@ -48,7 +52,7 @@ export default function Laskuri() {
         ))}
       </form>
       <Toggle
-        label='Haluatko ravintosuunnitelman?'
+        label='Haluatko kehityksen mukaisen ravintosuunnitelman?'
         state={ravintosuunnitelma}
         setState={() => setRavintosuunnitelma((v) => !v)}
       />
@@ -59,7 +63,7 @@ export default function Laskuri() {
         </Price>
       </Text>
       <Text>
-        Ohjaajasi on: <Trainer>{ohjaajat[2]}</Trainer>
+        Ohjaajasi on: <Trainer>{ohjaaja}</Trainer>
       </Text>
       <BG />
     </SectionColumn>
