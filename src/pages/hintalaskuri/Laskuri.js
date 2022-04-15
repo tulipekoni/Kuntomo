@@ -12,9 +12,11 @@ export default function Laskuri() {
   const [laji, setLaji] = useState("Kuntosali");
   const [ravintosuunnitelma, setRavintosuunnitelma] = useState(true);
   const [hinta, setHinta] = useState(160);
-
   useEffect(() => {
-    setHinta(kesto);
+    var lajiaddon = parseInt(laji.charCodeAt(2));
+    var sum = parseInt(+kesto + +kerrat * 10);
+    var price = Math.round(sum / 2 + (lajiaddon % 12) * 8);
+    setHinta(price);
   }, [kesto, kerrat, laji, ravintosuunnitelma]);
 
   return (
