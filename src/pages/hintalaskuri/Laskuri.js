@@ -32,6 +32,7 @@ export default function Laskuri() {
         min={1}
         max={7}
       />
+
       <Slider
         title='Kuinka pitkiä treenejä haluat tehdä?'
         latter='0'

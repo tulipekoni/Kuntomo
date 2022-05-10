@@ -1,0 +1,142 @@
+.input,
+textarea {
+  font-size: 100%;
+  line-height: normal;
+  position: relative;
+  display: block;
+  padding: 20px;
+  width: 93%;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  color: #aaa;
+  font-weight: 400;
+  -webkit-appearance: none; /* for box shadows to show on iOS */
+  background-color: #e1dbff;
+  border: 2px solid transparent;
+  -webkit-transition: background-color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+}
+
+.input_label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  color: #6a7989;
+  font-weight: bold;
+  font-size: 70.25%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  text-align: left;
+  position: absolute;
+  bottom: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  padding: 0 1.25em;
+  -webkit-transform: translate3d(0, 3em, 0);
+  transform: translate3d(0, 3em, 0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+.input_label-content {
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%;
+  color: #8b8c8b;
+  padding: 0.2 5em 0;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.input_label-content {
+  color: #8b8c8b;
+  padding: 0.25em 0;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+button {
+  border-radius: 0;
+  height: 100px;
+  font-size: 24px;
+  font-weight: 500;
+  transition: all 0.2s linear !important;
+  padding: 0;
+  letter-spacing: 0.5px;
+  border: none;
+  color: #fff;
+  background-color: #8a6fff;
+  cursor: pointer;
+  width: 75%;
+}
+button:disabled {
+  background-color: #d0d1d0;
+  color: #8b8c8b;
+  cursor: auto;
+}
+
+.input_label-content::after {
+  font-family: "Poppins", sans-serif;
+
+  content: attr(data-content);
+  position: absolute;
+  font-weight: 800;
+  bottom: 100%;
+  left: 0;
+  height: 80%;
+  width: 100%;
+  padding: 0.25em 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85em;
+}
+
+.input:focus + .input_label,
+.input-filled .input_label {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.input:focus + .input_label .input_label-content,
+.input-filled .input_label-content {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+.input:focus + input,
+.input-filled input {
+  outline: none;
+  background-color: transparent;
+  border-color: #8a6fff;
+}
+
+.textarea:focus + .input_label,
+.input-filled .input_label {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.textarea:focus + .input_label .input_label-content,
+.input-filled .input_label-content {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+textarea:focus + textarea,
+.input-filled textarea {
+  outline: none;
+  background-color: transparent;
+  border-color: #8a6fff;
+}
