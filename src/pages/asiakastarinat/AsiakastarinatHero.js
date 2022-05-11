@@ -4,6 +4,7 @@ import StarReview from "../../components/StarReview";
 import styled from "styled-components";
 import { device } from "../../infrastructure/media-queries/device";
 import { SectionRow } from "../../components/Section";
+import Button from "../../components/Button";
 
 export default function () {
   return (
@@ -39,4 +40,11 @@ const StarContainer = styled.div`
   @media ${device.tablet} {
     flex-direction: column;
   }
+`;
+
+const ButtonContainer = styled.div``;
+
+const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
