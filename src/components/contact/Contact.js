@@ -4,7 +4,6 @@ import { PageHolder } from "../../components/global/PageHolder";
 import "../../styles/input.css";
 import Input from "./Input";
 import TextArea from "./TextArea";
-import Fade from "react-reveal/Fade";
 
 const InputContainer = styled.form`
   width: 80%;
@@ -62,58 +61,45 @@ export default function Contact({ id }) {
 
   return (
     <PageHolder id={id}>
-      <Fade bottom fraction={1}>
-        <h1>Contact</h1>
-      </Fade>
-      <Fade bottom fraction={1}>
-        <H4>Get to know me properly.</H4>
-      </Fade>
+      <h1>Contact</h1>
+      <H4>Get to know me properly.</H4>
       <Container>
         <InputContainer onSubmit={Submit}>
-          <Fade bottom fraction={1}>
-            <Input
-              label='My Name'
-              type='text'
-              name='name'
-              required
-              onChange={(event) => setName(event.target.value)}
-              value={name}
-              disabled={sent}
-            />
-          </Fade>
-          <Fade bottom fraction={1}>
-            <Input
-              label='My Email'
-              type='email'
-              name='email'
-              required
-              onChange={(event) => setEmail(event.target.value)}
-              value={email}
-              disabled={sent}
-            />
-          </Fade>
-          <Fade bottom>
-            <TextArea
-              label='Your Message'
-              required
-              onChange={(event) => setText(event.target.value)}
-              style={{ resize: "none" }}
-              rows='8'
-              value={text}
-              disabled={sent}
-            />
-          </Fade>
-          <Fade bottom fraction={1}>
-            <button
-              style={{ cursor: sent ? "auto" : "pointer" }}
-              type='submit'
-              onClick={Submit}
-              disabled={disableButton()}
-            >
-              {sent ? "Message Sent!" : "Send Message"}
-            </button>
-          </Fade>
-
+          <Input
+            label='My Name'
+            type='text'
+            name='name'
+            required
+            onChange={(event) => setName(event.target.value)}
+            value={name}
+            disabled={sent}
+          />
+          <Input
+            label='My Email'
+            type='email'
+            name='email'
+            required
+            onChange={(event) => setEmail(event.target.value)}
+            value={email}
+            disabled={sent}
+          />
+          <TextArea
+            label='Your Message'
+            required
+            onChange={(event) => setText(event.target.value)}
+            style={{ resize: "none" }}
+            rows='8'
+            value={text}
+            disabled={sent}
+          />
+          <button
+            style={{ cursor: sent ? "auto" : "pointer" }}
+            type='submit'
+            onClick={Submit}
+            disabled={disableButton()}
+          >
+            {sent ? "Message Sent!" : "Send Message"}
+          </button>
           <p
             style={{
               fontSize: 20,
