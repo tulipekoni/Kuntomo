@@ -1,17 +1,6 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import { InputDiv } from "./Components";
 
-const InputDiv = styled.div`
-  font-size: 150%;
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  width: 80%;
-  max-width: 600px;
-  vertical-align: top;
-  padding: 0 0 32px 0;
-  font-family: "Poppins", sans-serif;
-`;
 export default function Input(props) {
   const [state, setState] = useState("");
 

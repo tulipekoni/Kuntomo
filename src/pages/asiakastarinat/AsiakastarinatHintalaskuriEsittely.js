@@ -1,34 +1,33 @@
-import React from 'react'
+import React from "react";
 import { Balls3x } from "../../components/Ball3x";
 import Button from "../../components/Button";
 import styled from "styled-components";
+import { SectionColumn } from "../../components/Section";
 
 export default function Hintalaskuriin() {
   return (
-    <SectionColumnJustifyContent>
-      <BallsContainer alignEnd>
-        <Balls3x/>
-      </BallsContainer>
+    <SectionColumn>
       <Header>Tahdomme sinut mukaan tyytyväiseen asiakaskuntaamme!</Header>
-      <Text>Hintalaskurimme avulla voit ottaa selvää,
-         millainen valmennus paketti sinulle olisi mahdollista räätälöidä.
-         Laskuri suosittelee juuri sinun tarpeisiisi sopivaa valmennuksen ammattilaista.
-         Voit myös kätevästi tarkastella harjoituspakettien hintoja.
+      <Text>
+        Hintalaskurimme avulla voit ottaa selvää, millainen valmennus paketti
+        sinulle olisi mahdollista räätälöidä. Laskuri suosittelee juuri sinun
+        tarpeisiisi sopivaa valmennuksen ammattilaista. Voit myös kätevästi
+        tarkastella harjoituspakettien hintoja.
       </Text>
       <ButtonContainer>
-        <Button/>
+        <Button />
       </ButtonContainer>
-      <BallsContainer>
-        <Balls3x/>
-      </BallsContainer>
-    </SectionColumnJustifyContent>
-  )
+      <BG />
+    </SectionColumn>
+  );
 }
 
-const BallsContainer = styled.div`
-  display: flex;
-  justify-content: ${props => props.alignEnd ? "flex-end" : "flex-start"};
-`;
+const BG = () => (
+  <>
+    <Balls3x style={{ position: "absolute", top: 0, right: 0 }} />
+    <Balls3x style={{ position: "absolute", bottom: 0, left: 0 }} />
+  </>
+);
 
 const Header = styled.h1`
   text-align: center;
@@ -40,18 +39,8 @@ const Text = styled.p`
   font-size: 14px;
 `;
 
-const SectionColumnJustifyContent = styled.div`
-  justify-content: space-evenly;
-  display: flex;
-  flex-direction: column;
-  padding: 32px;
-  position: relative;
-`;
-
 const ButtonContainer = styled.div`
   justify-content: center;
   display: flex;
   padding: 32px;
 `;
-
-

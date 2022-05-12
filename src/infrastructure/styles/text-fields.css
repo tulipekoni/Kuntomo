@@ -4,8 +4,9 @@ textarea {
   line-height: normal;
   position: relative;
   display: block;
+  box-sizing: border-box;
   padding: 20px;
-  width: 93%;
+  width: 100%;
   border: none;
   outline: none;
   border-radius: 0;
@@ -35,7 +36,7 @@ textarea {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  width: 100%;
+  width: 50%;
   text-align: left;
   position: absolute;
   bottom: 100%;
@@ -68,18 +69,28 @@ textarea {
 }
 
 button {
+  box-sizing: border-box;
   border-radius: 0;
   height: 100px;
-  font-size: 24px;
+  width: 100%;
+  max-width: 800px;
+  font-size: 18px;
   font-weight: 500;
   transition: all 0.2s linear !important;
   padding: 0;
   letter-spacing: 0.5px;
   border: none;
-  color: #fff;
   background-color: #8a6fff;
   cursor: pointer;
-  width: 75%;
+  align-self: center;
+  font-weight: bold;
+
+  font-size: calc(20px + (28 - 20) * ((100vw - 300px) / (800-300)));
+  color: #fff;
+  font-family: "Poppins";
+}
+button::before {
+  content: attr(data-content);
 }
 button:disabled {
   background-color: #d0d1d0;
