@@ -1,31 +1,44 @@
-import React from 'react'
-import styled from 'styled-components';
-import Hipsut from '../../components/Hipsut'
-import { SectionRow } from '../../components/Section'
-import { theme } from '../../infrastructure/theme';
+import React from "react";
+import styled from "styled-components";
+import Hipsut from "../../components/Hipsut";
+import { SectionRow } from "../../components/Section";
+import { device } from "../../infrastructure/media-queries/device";
+import { theme } from "../../infrastructure/theme";
 
-export default function Asiakastarina( {tarina, kuva, nimi} ) {
+export default function Asiakastarina({ teksti, kuva, nimi }) {
   return (
-    <SectionRowJustifyContent>
-        <Hipsut/>
-        <Tarina>{tarina}</Tarina>
-        <ImageContainer>
-            <IMG src={kuva}></IMG>
-            <Nimi>{nimi}</Nimi>
-        </ImageContainer>
-    </SectionRowJustifyContent>
-  )
+    <Container>
+      <Hipsut />
+      <TextContainer>
+        <Tarina>{teksti}</Tarina>
+        <NimiMobile>{nimi}</NimiMobile>
+      </TextContainer>
+
+      <ImageContainer>
+        <IMG src={kuva} />
+        <Nimi>{nimi}</Nimi>
+      </ImageContainer>
+    </Container>
+  );
 }
-const SectionRowJustifyContent = styled.div`
-  justify-content: space-evenly;
+const Container = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 32px;
+  padding: 16px 32px;
   position: relative;
 `;
-
+const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+  @media ${device.tablet} {
+    padding: 32px;
+  }
+`;
 const IMG = styled.img`
-  width: 140px
+  width: 100px;
+  border-radius: 16px;
 `;
 const Tarina = styled.p`
   font-size: 14px;
@@ -36,8 +49,22 @@ const Nimi = styled.p`
   font-size: 14px;
   text-align: center;
 `;
+const NimiMobile = styled.p`
+  margin: 0;
+  color: ${theme.colors.primary};
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  @media ${device.tablet} {
+    display: none;
+  }
+`;
 const ImageContainer = styled.div`
+  display: none;
+  flex-direction: column;
+  margin-left: 16px;
+
+  @media ${device.tablet} {
     display: flex;
-    flex-direction: column;
-    padding-left: 16px;
+  }
 `;

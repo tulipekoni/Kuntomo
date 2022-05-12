@@ -4,9 +4,8 @@ import StarReview from "../../components/StarReview";
 import styled from "styled-components";
 import { device } from "../../infrastructure/media-queries/device";
 import { SectionRow } from "../../components/Section";
-import Button from "../../components/Button";
 
-export default function () {
+export default function AsiakasTarinatHero() {
   return (
     <SectionRow>
       <div>
@@ -18,7 +17,7 @@ export default function () {
         </p>
         <StarContainer>
           <StarReview starCount={5} label='Salilehti' />
-          <StarReview starCount={5} label='TrackRun magazine' />
+          <StarReview starCount={5} label='TrackRun' />
           <StarReview starCount={4} label='GymShark' />
         </StarContainer>
       </div>
@@ -36,15 +35,7 @@ const StarContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-self: center;
-  justify-content: space-around;
   @media ${device.tablet} {
     flex-direction: column;
   }
-`;
-
-const ButtonContainer = styled.div``;
-
-const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
 `;

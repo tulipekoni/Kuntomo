@@ -1,4 +1,5 @@
 import React from "react";
+import Contact from "../../components/contact";
 import PageContainer from "../../components/PageContainer";
 import AsiakastarinatArviot from "./AsiakastarinatArviot";
 import AsiakastarinatBar from "./AsiakastarinatBar";
@@ -9,9 +10,10 @@ export default function Asiakastarinat() {
   return (
     <PageContainer>
       <AsiakastarinatHero />
-      <AsiakastarinatBar/>
-      <AsiakastarinatArviot/>
-      <AsiastarinatHintalaskuriEsittely/>
+      <AsiakastarinatBar />
+      <AsiakastarinatArviot />
+      <AsiastarinatHintalaskuriEsittely />
+      <Contact />
     </PageContainer>
   );
 }

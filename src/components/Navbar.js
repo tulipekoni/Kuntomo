@@ -6,23 +6,29 @@ import { device } from "../infrastructure/media-queries/device";
 import { theme } from "../infrastructure/theme";
 export default function Navbar() {
   const location = useLocation();
-  console.log(location);
   return (
     <NavHeader>
       <Container>
         <LogoButton />
-        <NavigationLink to='/' active={location.pathname === "/"}>
+        <NavigationLink
+          to='/'
+          active={location && location.pathname === "/" ? true : false}
+        >
           Koti
         </NavigationLink>
         <NavigationLink
           to='/asiakastarinat'
-          active={location.pathname === "/asiakastarinat"}
+          active={
+            location && location.pathname === "/asiakastarinat" ? true : false
+          }
         >
           Asiakastarinat
         </NavigationLink>
         <NavigationLink
           to='/hintalaskuri'
-          active={location.pathname === "/hintalaskuri"}
+          active={
+            location && location.pathname === "/hintalaskuri" ? true : false
+          }
         >
           Hintalaskuri
         </NavigationLink>

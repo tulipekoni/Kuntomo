@@ -5,8 +5,8 @@ export default function StarReview({ starCount, label }) {
   return (
     <Container>
       <div>
-        {[...Array(starCount)].map(() => {
-          return <Star hide={false} />;
+        {[...Array(starCount)].map((value, index) => {
+          return <Star key={index} hide={false} />;
         })}
       </div>
       <Label marginLeft={5 - starCount}>{label}</Label>
@@ -16,6 +16,7 @@ export default function StarReview({ starCount, label }) {
 
 const Container = styled.div`
   display: flex;
+  flex: 1;
   align-items: center;
   padding: 0;
   flex-direction: column;
