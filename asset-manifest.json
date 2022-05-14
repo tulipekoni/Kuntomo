@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Kuntomo/static/css/main.4a154cfb.css",
+    "main.js": "/Kuntomo/static/js/main.6b5799a1.js",
+    "static/media/erna.jpg": "/Kuntomo/static/media/erna.e05c154c2a0241cc3a1a.jpg",
+    "static/media/birgitta.jpg": "/Kuntomo/static/media/birgitta.ff9adc5266b389dddb0e.jpg",
+    "static/media/pasi.jpg": "/Kuntomo/static/media/pasi.919aa8be4fbf4c86421e.jpg",
+    "static/media/make.jpg": "/Kuntomo/static/media/make.bf3f856322caccaf6a04.jpg",
+    "static/media/saliharjoittelu.jpg": "/Kuntomo/static/media/saliharjoittelu.2a45cf9e5042b6458ccf.jpg",
+    "static/media/voimaharjoittelu.jpg": "/Kuntomo/static/media/voimaharjoittelu.2651ae8870ad97a77957.jpg",
+    "static/media/kestävyysharjoittelu.jpg": "/Kuntomo/static/media/kestävyysharjoittelu.2ff657e68a6e8b2caaed.jpg",
+    "static/media/ryhmäliikunta.jpg": "/Kuntomo/static/media/ryhmäliikunta.71670fad9a1ec1a8b5a5.jpg",
+    "index.html": "/Kuntomo/index.html",
+    "main.4a154cfb.css.map": "/Kuntomo/static/css/main.4a154cfb.css.map",
+    "main.6b5799a1.js.map": "/Kuntomo/static/js/main.6b5799a1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a154cfb.css",
+    "static/js/main.6b5799a1.js"
+  ]
+}
