@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Hipsut from "../../components/Hipsut";
-import { SectionRow } from "../../components/Section";
-import { device } from "../../infrastructure/media-queries/device";
-import { theme } from "../../infrastructure/theme";
+import Hipsut from "../../../components/Hipsut";
+import { SectionRow } from "../../../components/Section";
+import { device } from "../../../infrastructure/media-queries/device";
+import { theme } from "../../../infrastructure/theme";
 
 export default function Asiakastarina({ teksti, kuva, nimi }) {
   return (

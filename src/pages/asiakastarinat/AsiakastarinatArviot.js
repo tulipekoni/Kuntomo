@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { SectionColumn } from "../../components/Section";
-import Asiakastarina from "./Asiakastarina";
+import Asiakastarina from "./tarina/Asiakastarina";
 
 export default function AsiakastarinatArviot() {
   return (

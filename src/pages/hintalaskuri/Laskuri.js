@@ -13,12 +13,19 @@ export default function Laskuri() {
   const [ravintosuunnitelma, setRavintosuunnitelma] = useState(true);
   const [hinta, setHinta] = useState(160);
   const [ohjaaja, setOhjaaja] = useState(ohjaajat[0]);
+
+  //jos jokin tiloista muuttuu, lasketaan hinta uudelleen
   useEffect(() => {
+    //muutetaan lajinimien kolmas kirjain numeroksi
     var lajiaddon = parseInt(laji.charCodeAt(2));
+    //lisätään kesto ja kerrat yhteen
     var sum = parseInt(+kesto * 10 + +kerrat * 10);
+    //jos ravintosuunnitelma on valittuna, lisätään 20 laskuun
     var ravinto = ravintosuunnitelma ? 20 : 0;
+    //laskutoimitus
     var price = Math.round(sum / 2 + (lajiaddon % 12) * 8 + ravinto);
     setHinta(price);
+    //moduloidaan ohjaajat ja asetetaan se stateen
     setOhjaaja(ohjaajat[price % 7]);
   }, [kesto, kerrat, laji, ravintosuunnitelma]);
 
@@ -43,6 +50,7 @@ export default function Laskuri() {
         max={8}
       />
       <form>
+        {/* mapataan lajit */}
         {lajit.map((value, index) => (
           <RadioButton
             label={value}
