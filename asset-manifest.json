@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Kuntomo/static/css/main.4a154cfb.css",
-    "main.js": "/Kuntomo/static/js/main.b6851513.js",
+    "main.js": "/Kuntomo/static/js/main.31bd6027.js",
     "static/media/erna.jpg": "/Kuntomo/static/media/erna.e05c154c2a0241cc3a1a.jpg",
     "static/media/birgitta.jpg": "/Kuntomo/static/media/birgitta.ff9adc5266b389dddb0e.jpg",
     "static/media/pasi.jpg": "/Kuntomo/static/media/pasi.919aa8be4fbf4c86421e.jpg",
@@ -12,10 +12,10 @@
     "static/media/ryhmäliikunta.jpg": "/Kuntomo/static/media/ryhmäliikunta.71670fad9a1ec1a8b5a5.jpg",
     "index.html": "/Kuntomo/index.html",
     "main.4a154cfb.css.map": "/Kuntomo/static/css/main.4a154cfb.css.map",
-    "main.b6851513.js.map": "/Kuntomo/static/js/main.b6851513.js.map"
+    "main.31bd6027.js.map": "/Kuntomo/static/js/main.31bd6027.js.map"
   },
   "entrypoints": [
     "static/css/main.4a154cfb.css",
-    "static/js/main.b6851513.js"
+    "static/js/main.31bd6027.js"
   ]
 }
