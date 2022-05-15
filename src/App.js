@@ -11,9 +11,17 @@ function App() {
         <Navbar />
         <div style={{ display: "flex", justifyContent: "center" }}>
           <Routes>
-            <Route exact path='/' element={<Koti />} />
-            <Route exact path='/asiakastarinat' element={<Asiakastarinat />} />
-            <Route exact path='/hintalaskuri' element={<Hintalaskuri />} />
+            <Route exact path='/Kuntomo' element={<Koti />} />
+            <Route
+              exact
+              path='/Kuntomo/asiakastarinat'
+              element={<Asiakastarinat />}
+            />
+            <Route
+              exact
+              path='/Kuntomo/hintalaskuri'
+              element={<Hintalaskuri />}
+            />
           </Routes>
         </div>
       </Fragment>

@@ -11,23 +11,32 @@ export default function Navbar() {
       <Container>
         <LogoButton />
         <NavigationLink
-          to='/'
-          active={location && location.pathname === "/" ? true : false}
+          to='/Kuntomo'
+          active={
+            (location && location.pathname === "/Kuntomo") ||
+            location.pathname === "/Kuntomo/"
+              ? true
+              : false
+          }
         >
           Koti
         </NavigationLink>
         <NavigationLink
-          to='/asiakastarinat'
+          to='/Kuntomo/asiakastarinat'
           active={
-            location && location.pathname === "/asiakastarinat" ? true : false
+            location && location.pathname === "/Kuntomo/asiakastarinat"
+              ? true
+              : false
           }
         >
           Asiakastarinat
         </NavigationLink>
         <NavigationLink
-          to='/hintalaskuri'
+          to='/Kuntomo/hintalaskuri'
           active={
-            location && location.pathname === "/hintalaskuri" ? true : false
+            location && location.pathname === "/Kuntomo/hintalaskuri"
+              ? true
+              : false
           }
         >
           Hintalaskuri

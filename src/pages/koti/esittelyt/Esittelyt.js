@@ -1,8 +1,8 @@
 import React from "react";
 import { SectionColumn } from "../../../components/Section";
 import { HeaderCenter, Paragraph } from "./Components";
-import KotiLajiEsittely from "./LajiEsittely";
-export default function KotiLajiEsittelyt() {
+import Laji from "./Laji";
+export default function Esittelyt() {
   return (
     <SectionColumn>
       <HeaderCenter>Tarjoamme kattavaa valmennusta</HeaderCenter>
@@ -11,7 +11,7 @@ export default function KotiLajiEsittelyt() {
       </Paragraph>
       {/* mapataan lajit */}
       {lajit.map((laji, index) => (
-        <KotiLajiEsittely
+        <Laji
           key={index}
           reverse={index % 2 === 1} //jos mapatun lajin indexi on pariton, reverse asetetaan trueksi
           kuva={laji.kuva}
@@ -27,21 +27,21 @@ export default function KotiLajiEsittelyt() {
 
 const lajit = [
   {
-    kuva: require("./LajiEsittelyKuvat/saliharjoittelu.jpg"),
+    kuva: require("./kuvat/saliharjoittelu.jpg"),
     otsikko: "Saliharjoittelu",
     teksti: "Tarjoamme Oulun parhaan salin laajimmalla laitekokonaisuudella",
     lisätieto: "Sali auki 24/7!",
     hinta: 32,
   },
   {
-    kuva: require("./LajiEsittelyKuvat/ryhmäliikunta.jpg"),
+    kuva: require("./kuvat/ryhmäliikunta.jpg"),
     otsikko: "Ryhmäliikunta",
     teksti: "Tarjolla jumppaa, joogaa ja pilatesta joka arkipäivä",
     lisätieto: "klo 12-14 ja klo 16-18",
     hinta: 40,
   },
   {
-    kuva: require("./LajiEsittelyKuvat/voimaharjoittelu.jpg"),
+    kuva: require("./kuvat/voimaharjoittelu.jpg"),
     otsikko: "Voimaharjoittelu",
     teksti:
       "Kuntosaliltamme löytyy painot ja valmennus kovemmillekin treenaajille!",
@@ -49,7 +49,7 @@ const lajit = [
     hinta: 80,
   },
   {
-    kuva: require("./LajiEsittelyKuvat/kestävyysharjoittelu.jpg"),
+    kuva: require("./kuvat/kestävyysharjoittelu.jpg"),
     otsikko: "Kestävyysharjoittelu",
     teksti:
       "Kuntosaliltamme löytyy valmennuksen lisäksi myös kaikki välineet kestävyysharjoitteluun!",

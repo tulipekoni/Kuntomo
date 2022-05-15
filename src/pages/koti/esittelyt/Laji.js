@@ -11,7 +11,7 @@ import {
   Hinta,
 } from "./Components";
 
-export default function LajiEsittely(props) {
+export default function Laji(props) {
   return (
     <Container reverse={props.reverse}>
       <IMG reverse={props.reverse} src={props.kuva} />

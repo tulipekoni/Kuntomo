@@ -97,6 +97,7 @@ const Container = styled.form`
   flex-direction: column;
   align-items: center;
   position: relative;
+  padding: 16px;
   font-family: "Poppins", sans-serif;
 `;
 const HeaderContainer = styled.form`

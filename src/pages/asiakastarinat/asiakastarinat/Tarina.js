@@ -1,16 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import Hipsut from "../../../components/Hipsut";
-import { SectionRow } from "../../../components/Section";
 import { device } from "../../../infrastructure/media-queries/device";
 import { theme } from "../../../infrastructure/theme";
 
-export default function Asiakastarina({ teksti, kuva, nimi }) {
+export default function Tarina({ teksti, kuva, nimi }) {
   return (
     <Container>
       <Hipsut />
       <TextContainer>
-        <Tarina>{teksti}</Tarina>
+        <Paragraph>{teksti}</Paragraph>
         <NimiMobile>{nimi}</NimiMobile>
       </TextContainer>
 
@@ -40,7 +39,7 @@ const IMG = styled.img`
   width: 100px;
   border-radius: 16px;
 `;
-const Tarina = styled.p`
+const Paragraph = styled.p`
   font-size: 14px;
 `;
 const Nimi = styled.p`

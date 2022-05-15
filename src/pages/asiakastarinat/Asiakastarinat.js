@@ -1,18 +1,18 @@
 import React from "react";
 import Contact from "../../components/contact";
 import PageContainer from "../../components/PageContainer";
-import AsiakastarinatArviot from "./AsiakastarinatArviot";
-import AsiakastarinatBar from "./AsiakastarinatBar";
-import AsiakastarinatHero from "./AsiakastarinatHero";
-import AsiastarinatHintalaskuriEsittely from "./AsiakastarinatHintalaskuriEsittely";
+import Arviot from "./asiakastarinat/Tarinat";
+import Saavutukset from "./Saavutukset";
+import Hero from "./Hero";
+import LinkkiLaskuriin from "./LinkkiLaskuriin";
 
 export default function Asiakastarinat() {
   return (
     <PageContainer>
-      <AsiakastarinatHero />
-      <AsiakastarinatBar />
-      <AsiakastarinatArviot />
-      <AsiastarinatHintalaskuriEsittely />
+      <Hero />
+      <Saavutukset />
+      <Arviot />
+      <LinkkiLaskuriin />
       <Contact />
     </PageContainer>
   );

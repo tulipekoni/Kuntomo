@@ -4,7 +4,7 @@ import Button from "../../components/Button";
 import styled from "styled-components";
 import { SectionColumn } from "../../components/Section";
 
-export default function Hintalaskuriin() {
+export default function LinkkiLaskuriin() {
   return (
     <SectionColumn>
       <Header>Tahdomme sinut mukaan tyytyväiseen asiakaskuntaamme!</Header>

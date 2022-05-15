@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { device } from "../../infrastructure/media-queries/device";
 import { SectionRow } from "../../components/Section";
 
-export default function AsiakasTarinatHero() {
+export default function Hero() {
   return (
     <SectionRow>
       <div>

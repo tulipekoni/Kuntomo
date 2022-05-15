@@ -5,7 +5,7 @@ import ImageSVG from "../../components/image-svg";
 import Button from "../../components/Button";
 import { device } from "../../infrastructure/media-queries/device";
 
-export default function KotiHintalaskuriin() {
+export default function LinkkiLaskuriin() {
   return (
     <SectionRow>
       <TextContainer>

@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { SectionRow } from "../../components/Section";
 import { device } from "../../infrastructure/media-queries/device";
 
-export default function KotiHero() {
+export default function Hero() {
   return (
     <SectionRow>
       <TextContainer>

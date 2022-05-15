@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { theme } from "../../infrastructure/theme";
 import { device } from "../../infrastructure/media-queries/device";
 
-export default function AsiakastarinatBar() {
+export default function Saavutukset() {
   return (
     <SectionRowJustifyContent>
       <Yritystieto h2='3' h6='Vuoden kokemus' />
