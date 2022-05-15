@@ -1,10 +1,13 @@
 import Asiakastarinat from "./pages/asiakastarinat/Asiakastarinat";
 import Hintalaskuri from "./pages/hintalaskuri/Hintalaskuri";
 import Koti from "./pages/koti/Koti";
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 function App() {
+  useEffect(() => {
+    document.title = "Kuntomo - Kuntosali & valmennus";
+  }, []);
   return (
     <Router>
       <Fragment>
