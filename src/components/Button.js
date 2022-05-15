@@ -6,7 +6,7 @@ export default function Button() {
   const [hover, setHover] = useState(false);
   return (
     <Link
-      to='/hintalaskuri'
+      to='/Kuntomo/hintalaskuri'
       style={linkStyle}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
@@ -16,12 +16,6 @@ export default function Button() {
     </Link>
   );
 }
-const linkHoverStyle = {
-  paddingLeft: 18,
-  paddingTop: 20,
-  paddingRight: 18,
-  paddingBottom: 20,
-};
 const linkStyle = {
   backgroundColor: theme.colors.primary,
   paddingLeft: 18,
